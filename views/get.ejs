@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="alert">
+      after you clicked the link , you should refresh the page
+    </div>
+     <% for (let i = 0; i < download_links.length; i++) { %>
+          <a target="_blank" href="<%= download_links[i] %>" download>Direct Download - PART <%= i + 1 %></a> <br>
+     <% } %>
+     <hr>
+     <h3>Course Details ( UDEMY  )</h3>
+     <hr>
+    <div class="img-container">
+      <img src="<%= course_image[0] %>" alt="">
+      <img src="<%= course_image[1] %>" alt="">
+      <img src="<%= course_image[2] %>" alt="">
+    </div>
+  </body>
+</html>
